@@ -1,0 +1,269 @@
+
+{% extends 'accounts/mainfile.html' %}
+
+
+
+{% block content %}
+{% load static %}
+<!-- Login popup -->
+	<div class="modal" id="model">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<p class="text"> Login</p>
+					<button type="button" class="close" data-dismiss="modal"> &times;</button>
+
+				</div>
+				<div class="modal-body">
+					<form>
+        			<div class="form-group">
+        				<label><i class="fas fa-user"></i> Username</label>
+        				<input type="text" class="form-control">
+        				<span class ='error'></span>
+
+        			</div>
+		        	<div class="form-group">
+		        		<label><i class="fas fa-key"></i> Password</label>
+		        		<input type="Password" class="form-control">
+		        		<span class ='error'></span>
+
+		        	</div >
+            		<label><input type="checkbox"> Remember me</label>
+		        	<div class="form-group">
+		        		<button class="btn btn-success" onclick=" return validation()" > Login </button>
+
+		        	</div>
+		        	<div class="form-group">
+		        		<p><a  href=""> Forget you Password/Email?</a></p>
+		                <p><a  href={% url "accounts/signup.html"> Create a New Account..</a></p>
+		        	</div>
+		        	</form>
+				</div>
+
+
+			</div>
+
+		</div>
+
+
+
+	</div>
+   	<!--Home Page ko design-->
+	<div class="thumbnail">
+
+  		<img class="homepageimg" src="{% static 'picture/homepage.jpg'%} " alt="Snow" style="width:100%; height: 100vh;">
+	    <div class="centered">
+
+	    	<!--img src="travellogo.png" alt="logo" -->
+	    	<h1 id="heading">TRAVEL WORLD</h1>
+	    	<button type="button" class="btn1 " onclick="window.location.href='#booking';">Book Now </button>
+	    	<button type="button" class="btn1 " onclick="window.location.href='signup/signup.html';" >Join Now</button>
+	    </div>
+	</div>
+	<div class="infocontainer" style="margin:50px 0">
+		<div class="row">
+  			<div class="column">
+    			<img class="img-thumbnail" src="{% static 'picture/offer.jpg'%} " style="width:100%">
+    				<h2>Super Offers </h2>
+    				<p>Up to 50% off . Always 25% off for student.</p>
+  			</div>
+
+  			<div class="column">
+    			<img class="img-thumbnail" src="{% static 'picture/hotel.jpg'%} " style="width:100%">
+    				<h2>Hotel Booking Comming Soon !!</h2>
+    				<p>Up to 20% cash back in first week</p>
+  			</div>
+		</div>
+
+
+
+	</div>
+
+
+	<!-- BOOKING START FROM HERE   -->
+	<div id="booking">
+		<h1 id="book"> Booking</h1>
+		<div class="fun">
+			<p>Quick Search</p>
+			<div class="s1">
+				 <p>From</p>
+					 <form action="/action_page.php">
+					  <select name="cars" id="from1">
+					    <option value="volvo">Kathmandu</option>
+					    <option value="saab">Beunos Aries</option>
+					    <option value="opel">New York</option>
+					    <option value="audi">Nagasaki</option>
+					    <option value="audi">Perth</option>
+					    <option value="audi">Cape Town</option>
+					    <option value="audi">Ibiza</option>
+					  </select>
+					</form>
+			</div>
+			<div class="s2">
+				 <p>To</p>
+				 <form action="/action_page.php">
+					 <select name="cars" id="from2">
+					    <option value="volvo">Kathmandu</option>
+					    <option value="saab">Beunos Aries</option>
+					    <option value="opel">New York</option>
+					    <option value="audi">Nagasaki</option>
+					    <option value="audi">Perth</option>
+					    <option value="audi">Cape Town</option>
+					    <option value="audi">Ibiza</option>
+					 </select>
+				</form>
+			</div>
+			<div class="s3">
+			 	<button class="btn btn-dark">Find</button>
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+
+
+	</div>
+
+<div class="content">
+
+
+	 		<div class="tbl">
+				<div id="offer">
+					<h2 class="blinking">>>>>OFFER ON-GOING<<<<</h2>
+				</div>
+				<table  >
+
+
+					<tr>
+						<th > SN </th>
+						<th > Destination </th>
+						<th > Duration </th>
+						<th > Actuall Price Per person </th>
+						<th > Offer Price Per Person </th>
+						<th > Book Now </th>
+
+					</tr>
+					<tbody>
+						<tr>
+							<th >1</th>
+							<td>Kathmandu</td>
+							<td>5d/4n</td>
+							<td>$500</td>
+							<td>$250</td>
+							<td><button class="btntable">Book Now</button></td>
+						</tr>
+						<tr>
+							<th >2</th>
+							<td>Beunos Aries</td>
+							<td>7d/6n</td>
+							<td>$950</td>
+							<td>$475</td>
+							<td><button class="btntable">Book Now</button></td>
+						</tr>
+						<tr>
+							<th >3</th>
+							<td>New York</td>
+							<td>6d/6n</td>
+							<td>$1000</td>
+							<td>$500</td><td>
+								<button class="btntable">Book Now</button></td>
+						</tr>
+						<tr>
+							<th >4</th>
+							<td>Nagasaki</td>
+							<td>8d/7n</td>
+							<td>$700</td>
+							<td>$350</td><td>
+								<button class="btntable">Book Now</button></td>
+						</tr>
+						<tr>
+							<th >5</th>
+							<td>Perth</td>
+							<td>10d/10n</td>
+							<td>$850</td>
+							<td>$425</td><td>
+								<button class="btntable">Book Now</button></td>
+						</tr>
+						<tr>
+							<th >6</th>
+							<td>Cape Town</td>
+							<td>8d/8n</td>
+							<td>$500</td>
+							<td>$250</td><td>
+								<button class="btntable">Book Now</button></td>
+						</tr>
+						<tr>
+							<th>7</th>
+							<td>Ibiza </td>
+							<td>10d/9n</td>
+							<td>$1200</td>
+							<td>$600</td>
+							<td><button class="btntable">Book Now</button></td>
+						</tr>
+
+					</tbody>
+
+
+				</table>
+			</div>
+
+
+
+
+		</div>
+
+		<div id="about">
+			<h1 id="abt">ABOUT US </h1>
+			<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. .</p>
+
+		</div>
+		<div class="inf">
+			<div class="abtcontainer" style="margin:0px 0">
+				<div class="row1">
+  					<div class="column2">
+    					<img class="img-thumbnail" src="{% static 'picture/abt1.jpg'%} " style="width:100%">
+	    				<h2> Fast and Reliable </h2>
+	    				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	    				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	    				quis nostrud exercitation ullamco laboris nisi ut </p>
+  					</div>
+
+		  			<div class="column2">
+		    			<img class="img-thumbnail" src="{% static 'picture/abt2.jpg'%} " style="width:100%">
+		    				<h2>Budget Travel</h2>
+		    				<p>
+		    				 Duis aute irure dolor in reprehenderit in voluptate velit esse
+		    				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		    				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		  			</div>
+		  			<div class="column2">
+		    			<img class="img-thumbnail" src="{% static 'picture/abt3.jpg'%} " style="width:100%">
+		    				<h2>People Choice Award Winner (18/19)</h2>
+		    				<p>
+		    				Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		    				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		    				consequat proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		  			</div>
+				</div>
+
+
+
+			</div>
+		</div>
+
+		<div class="footer">
+			<p>©  2020 Bishal. All Rights Reserved.</p>
+
+		</div>
+
+{% endblock  %}
+
