@@ -6,8 +6,19 @@ from django.http import HttpResponse
 def home(request):
     return render(request,'accounts/homepage.html')
 
-def customer(request):
-    return render(request,'accounts/customer.html')
+def booking(request):
+    return render(request,'accounts/booking.html')
 
-def product(request):
-    return render(request,'accounts/product.html')
+def aboutus(request):
+    return render(request,'accounts/aboutus.html')
+
+def signup(request):
+	return render(request,'accounts/signup.html')
+
+
+def homepage(request):
+	return render(request,'accounts/homepage.html')
+
+
+def forgotpass(request):
+	return render(request, 'accounts/forgotpass.html')
