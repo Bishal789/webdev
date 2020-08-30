@@ -1,0 +1,35 @@
+{% extends 'accounts/mainfile.html' %}
+{% block content %}
+<form method="POST" action="">
+    {% csrf_token %}
+
+    <label>name</label>
+    {{form.fname}}
+    <!--    <input type="text" id="name" name="name" />-->
+    <label>name</label>
+    {{form.lname}}
+
+    <label>name</label>
+    {{form.email}}
+
+    <label>name</label>
+    {{form.city}}
+
+    <label>email</label>
+    {{form.country}}
+    <!--    <input type="text" id="email" name="email" />-->
+
+    <label>password</label>
+    {{form.contact}}
+    <!--    <input type="text" id="password" name="password" />-->
+
+    <input type="submit" value="submit"/>
+</form>
+<!--to active selected tab in sidebar-->
+<script type="text/javascript">
+    $(function () {
+        $('.sidebar').find('.active').removeClass('active');
+        $('#user').addClass('active');
+    });
+</script>
+{% endblock %}

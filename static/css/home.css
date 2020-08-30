@@ -28,58 +28,6 @@ html{
 }
 
 
-.blinking{
-	color: red;
-	animation: blinkingText 1.2s infinite;
-	cursor: pointer;
-
-}
-/*@keyframes blinkingText{
-	0%{     color: red;    }
-    49%{    color: red; }
-    60%{    color: transparent; }
-    99%{    color:transparent;  }
-    100%{   color: red;    }
-
-}*/
-.tbl{
-	;
-	width: 100%;
-}
-
-.btntable{
-	border:none;
-	background-color: lightblue;
-	border-radius: 3px;
-	width: 100px;
-
-}
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 70%;
-  
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:hover {
-	cursor: pointer;
-	background-color:#f5f5f5;
-}
-.text{
-	font-size: 50px;
-	font-family: cairo black;
-	font-weight: bold;
-
-}
-.modal-content{
-	margin-top: 150px;
-}
 
 /* Home Page image */
 

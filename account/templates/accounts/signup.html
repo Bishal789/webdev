@@ -9,60 +9,57 @@
 
 
 
-	</div>
+	
 	<div class="Container">
 		  		<img class="signup" src="{% static 'picture/signup.jpg'%} " alt="Snow" style="width:61vw; height: 100vh;opacity: 0.7;">
 
-		<form>
+		<form action="" method="post">
+			{% csrf_token%}
+			
 			 <div class="centered2">
+			
 
 
 			<div class='form-group'>
-				<label  class="lbl"> First Name</label>
-				<input type="text" class="form-control" placeholder="Fname">
+				<label  class="lbl" > First Name</label>
+				<input type="text" class="form-control" placeholder="Fname" name="fname" required>
 				<span class="msg"></span>
 			</div>
 
 			<div class='form-group'>
 				<label  class="lbl"> Last Name</label>
-				<input type="text" class="form-control" placeholder="Lname">
+				<input type="text" class="form-control" placeholder="Lname" name="lname" required>
 				<span class="msg"></span>
 			</div>
 
 			<div class='form-group'>
 				<label class="lbl">  Email</label>
-				<input type="text" class="form-control" placeholder="abc@gmail.com">
+				<input type="text" class="form-control" placeholder="abc@gmail.com" name="email" required>
 				<span class="msg"></span>
 			</div>
 
 
 
 			<div class='form-group'>
-				<label  class="lbl"> Date of Birth</label>
-				<input type="text" class="form-control" placeholder="01.01.1999">
+				<label  class="lbl"> City</label>
+				<input type="text" class="form-control" placeholder="Kathmandu" name="city" required>
 				<span class="msg"></span>
 			</div>
 
 			<div class='form-group'>
 				<label  class="lbl"> Country</label>
-				<input type="dr" class="form-control" placeholder="Nepal">
+				<input type="dr" class="form-control" placeholder="Nepal" name="country" required>
 				<span class="msg"></span>
 			</div>
-
 			<div class='form-group'>
-				<label class="lbl"> Password</label>
-				<input type="Password" class="form-control" placeholder="*******">
+				<label  class="lbl"> Contact</label>
+				<input type="dr" class="form-control" placeholder="(+977-987654321)" name="contact" required>
 				<span class="msg"></span>
 			</div>
-
-			<div class='form-group'>
-				<label  class="lbl"> Rewrite Password</label>
-				<input type="Password" class="form-control" placeholder="*******">
-				<span class="msg"></span>
-			</div>
+			
 
 			<div class=" form-group">
-				<button class="btn" onclick=" return signup()"> Signup</button>
+				<button class="btn" onclick=" return signup()"> Register</button>
 			</div>
 			</div>
 
@@ -155,5 +152,11 @@
   <!-- Copyright -->
 
 </footer>
+
+<script >
+	
+
+	
+</script>
 
     {% endblock  %}

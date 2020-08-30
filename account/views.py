@@ -1,24 +1,33 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from user.models import Customer
+from user.form import CustomerForm
 
 
 # Create your views here.
 def home(request):
     return render(request,'accounts/homepage.html')
 
-def booking(request):
-    return render(request,'accounts/booking.html')
+
 
 def aboutus(request):
     return render(request,'accounts/aboutus.html')
 
-def signup(request):
-	return render(request,'accounts/signup.html')
 
 
-def homepage(request):
-	return render(request,'accounts/homepage.html')
+
+
+
+def adminlogin(request):
+	return render(request,'accounts/adminlogin.html')
+
+def dashboard(request):
+	return render(request,'accounts/dashboard.html')
 
 
 def forgotpass(request):
 	return render(request, 'accounts/forgotpass.html')
+
+
+
+
+
