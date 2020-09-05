@@ -7,7 +7,7 @@ def create(request):
     if  request.method=="POST":
         form=CustomerForm(request.POST)
         form.save()
-        return redirect("/homepage")
+        return redirect("/")
     else:
         form=CustomerForm()
     return render(request,"accounts/signup.html",{'form':form})
@@ -16,12 +16,17 @@ def index(request):
 	userdata = Customer.objects.all()
 	return render(request,"user/index.html",{'userdata':userdata})
 
-"""def update(request,id):
-    user=User.objects.get(id=id)
+def update(request,id):
+    user=Customer.objects.get(id=id)
     if request.method=="POST":
-        form=UserForm(request.POST,instance=user)
+        form=CustomerForm(request.POST,instance=user)
         form.save()
-        return redirect("/user")
+        return redirect("/user/userdata")
     else:
-        formedit=UserForm(instance=user)
-    return render(request,"user/edit.html",{'formedit':formedit})"""
+        form=CustomerForm(instance=user)
+    return render(request,"user/edit.html",{'form':form})
+
+def delete(request,id):
+    user=Customer.objects.get(id=id)
+    user.delete()
+    return redirect("/user/userdata")

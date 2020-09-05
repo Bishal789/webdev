@@ -1,7 +1,10 @@
-{% extends "accounts/mainfile.html" %}
-{% block content %}
 
-<a href="create" class="btn btn-primary">Create User</a>
+{% block content %}
+{% load static %}
+
+
+    <link rel="stylesheet" type="text/css"  href="{% static '/css/bootstrap.min.css'%}">
+
 <form method="post" action="search">
     {% csrf_token %}
 </form>
@@ -28,9 +31,11 @@
         <td>{{data.contact}}</td>
     
         <th>
-            <a href="update/{{data.Id}}" class="btn btn-primary">edit</a>
+            <a href="/user/update/{{data.id}}" class="btn btn-primary">edit</a>
             |
-            <a href="delete/{{data.id}}" class="btn btn-success">delete</a>
+            <a href="/user/delete/{{data.id}}" class="btn btn-success">delete</a>
+            |
+            <a href="/dashboard" class="btn btn-success">Back</a>
         </th>
     </tr>
     {% endfor %}

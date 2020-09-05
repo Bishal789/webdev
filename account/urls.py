@@ -7,9 +7,8 @@ from account import views
 urlpatterns = [
     path('',views.home),
     path('aboutus/', views.aboutus, name='aboutus'),
+    path('dashboard/',views.dashboard, name ='dashboard'),
 
-    path('forgotpass/',views.forgotpass, name='forgotpass'),
-    path('adminlogin/',views.adminlogin, name='adminlogin'),
     
     
 

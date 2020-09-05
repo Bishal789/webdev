@@ -13,10 +13,6 @@ def aboutus(request):
     return render(request,'accounts/aboutus.html')
 
 
-
-
-
-
 def adminlogin(request):
 	return render(request,'accounts/adminlogin.html')
 
@@ -24,8 +20,7 @@ def dashboard(request):
 	return render(request,'accounts/dashboard.html')
 
 
-def forgotpass(request):
-	return render(request, 'accounts/forgotpass.html')
+
 
 
 

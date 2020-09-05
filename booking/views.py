@@ -19,3 +19,20 @@ def create(request):
 def index(request):
 	bookdata = Booking.objects.all()
 	return render(request,"booking/index.html",{'bookdata':bookdata})
+
+
+
+def update(request,id):
+    user=Booking.objects.get(id=id)
+    if request.method=="POST":
+        form=BookingForm(request.POST,instance=user)
+        form.save()
+        return redirect("/booking/bookdata")
+    else:
+        form=BookingForm(instance=user)
+    return render(request,"booking/edit.html",{'form':form})
+
+def delete(request,id):
+    form=Booking.objects.get(id=id)
+    form.delete()
+    return redirect("/booking/bookdata")

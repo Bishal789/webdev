@@ -6,7 +6,9 @@ from user import views
 urlpatterns = [
     path('',views.create),
     path('userdata/',views.index),
-    #path('update/<int:id>',views.update)
+    path('update/<int:id>',views.update),
+    path('delete/<int:id>',views.delete)
+
     
     
 
